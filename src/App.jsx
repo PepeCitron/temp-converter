@@ -3,14 +3,28 @@ import React, { useState } from 'react'
 const scaleNames = {
   c: 'Celsius',
   f: 'Fahrenheit',
+  k: 'Kelvin',
 }
 
-function toCelsius(fahrenheit) {
+function toCelsiusFromFahrenheit(fahrenheit) {
   return ((fahrenheit - 32) * 5) / 9
 }
+function toCelsiusFromKelvin(kelvin) {
+  return kelvin - 273.15
+}
 
-function toFahrenheit(celsius) {
+function toFarenheitFromCelsius(celsius) {
   return (celsius * 9) / 5 + 32
+}
+function toFarenheitFromKelvin(kelvin) {
+  return (kelvin - 273.15) * (9 / 5) + 32
+}
+
+function toKelvinFromCelsius(celsius) {
+  return celsius + 273.15
+}
+function toKelvinFromFahrenheit(fahrenheit) {
+  return ((fahrenheit + 459.67) / 5) * 9
 }
 
 function BoilingVerdict({ celsius }) {
@@ -60,9 +74,23 @@ function Calculator() {
   const [scale, setScale] = useState('c')
 
   const celsius =
-    scale === 'c' ? temperature : tryConvert(temperature, toCelsius)
+    scale === 'f'
+      ? tryConvert(temperature, toCelsiusFromFahrenheit)
+      : scale === 'k'
+      ? tryConvert(temperature, toCelsiusFromKelvin)
+      : temperature
   const fahrenheit =
-    scale === 'f' ? temperature : tryConvert(temperature, toFahrenheit)
+    scale === 'c'
+      ? tryConvert(temperature, toFarenheitFromCelsius)
+      : scale === 'k'
+      ? tryConvert(temperature, toFarenheitFromKelvin)
+      : temperature
+  const kelvin =
+    scale === 'c'
+      ? tryConvert(temperature, toKelvinFromCelsius)
+      : scale === 'f'
+      ? tryConvert(temperature, toKelvinFromFahrenheit)
+      : temperature
 
   const handleCelsiusChange = temperature => {
     setScale('c')
@@ -71,6 +99,11 @@ function Calculator() {
 
   const handleFahrenheitChange = temperature => {
     setScale('f')
+    setTemperature(temperature)
+  }
+
+  const handleKelvinChange = temperature => {
+    setScale('k')
     setTemperature(temperature)
   }
 
@@ -85,6 +118,11 @@ function Calculator() {
         scale="f"
         temperature={fahrenheit}
         onTemperatureChange={handleFahrenheitChange}
+      />
+      <TemperatureInput
+        scale="k"
+        temperature={kelvin}
+        onTemperatureChange={handleKelvinChange}
       />
       <BoilingVerdict celsius={celsius} />
     </div>
