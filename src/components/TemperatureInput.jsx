@@ -14,7 +14,7 @@ export function TemperatureInput({ scale, temperature, onTemperatureChange }) {
   }
 
   return (
-    <>
+    <div className="form-group">
       <label htmlFor={name}>Température (en {scaleName})</label>
       <input
         type="number"
@@ -22,7 +22,8 @@ export function TemperatureInput({ scale, temperature, onTemperatureChange }) {
         value={temperature}
         onChange={handleChange}
         onFocus={handleFocus}
+        className="form-controle"
       />
-    </>
+    </div>
   )
 }
