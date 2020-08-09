@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/PepeCitron/temp-converter/static/css/main.1a6a59c4.chunk.css",
-    "main.js": "/PepeCitron/temp-converter/static/js/main.b06ee404.chunk.js",
-    "main.js.map": "/PepeCitron/temp-converter/static/js/main.b06ee404.chunk.js.map",
-    "runtime-main.js": "/PepeCitron/temp-converter/static/js/runtime-main.6e00cf08.js",
-    "runtime-main.js.map": "/PepeCitron/temp-converter/static/js/runtime-main.6e00cf08.js.map",
-    "static/js/2.32f9bff4.chunk.js": "/PepeCitron/temp-converter/static/js/2.32f9bff4.chunk.js",
-    "static/js/2.32f9bff4.chunk.js.map": "/PepeCitron/temp-converter/static/js/2.32f9bff4.chunk.js.map",
-    "index.html": "/PepeCitron/temp-converter/index.html",
-    "precache-manifest.965b8ab0d6ba7534a7ecbfae438119f5.js": "/PepeCitron/temp-converter/precache-manifest.965b8ab0d6ba7534a7ecbfae438119f5.js",
-    "service-worker.js": "/PepeCitron/temp-converter/service-worker.js",
-    "static/css/main.1a6a59c4.chunk.css.map": "/PepeCitron/temp-converter/static/css/main.1a6a59c4.chunk.css.map",
-    "static/js/2.32f9bff4.chunk.js.LICENSE.txt": "/PepeCitron/temp-converter/static/js/2.32f9bff4.chunk.js.LICENSE.txt"
+    "main.css": "/PepeCitron/static/css/main.1a6a59c4.chunk.css",
+    "main.js": "/PepeCitron/static/js/main.b06ee404.chunk.js",
+    "main.js.map": "/PepeCitron/static/js/main.b06ee404.chunk.js.map",
+    "runtime-main.js": "/PepeCitron/static/js/runtime-main.ecd04497.js",
+    "runtime-main.js.map": "/PepeCitron/static/js/runtime-main.ecd04497.js.map",
+    "static/js/2.32f9bff4.chunk.js": "/PepeCitron/static/js/2.32f9bff4.chunk.js",
+    "static/js/2.32f9bff4.chunk.js.map": "/PepeCitron/static/js/2.32f9bff4.chunk.js.map",
+    "index.html": "/PepeCitron/index.html",
+    "precache-manifest.65ac17b68963f44a39fb46fc569a6ab8.js": "/PepeCitron/precache-manifest.65ac17b68963f44a39fb46fc569a6ab8.js",
+    "service-worker.js": "/PepeCitron/service-worker.js",
+    "static/css/main.1a6a59c4.chunk.css.map": "/PepeCitron/static/css/main.1a6a59c4.chunk.css.map",
+    "static/js/2.32f9bff4.chunk.js.LICENSE.txt": "/PepeCitron/static/js/2.32f9bff4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.6e00cf08.js",
+    "static/js/runtime-main.ecd04497.js",
     "static/js/2.32f9bff4.chunk.js",
     "static/css/main.1a6a59c4.chunk.css",
     "static/js/main.b06ee404.chunk.js"
